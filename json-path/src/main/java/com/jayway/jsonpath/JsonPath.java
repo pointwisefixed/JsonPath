@@ -619,17 +619,6 @@ public class JsonPath {
     }
 
     /**
-     * Parses the given JSON input using the default {@link Configuration} and
-     * returns a {@link DocumentContext} for path evaluation
-     *
-     * @param json url
-     * @return a read context
-     */
-    public static DocumentContext parse(URL json) throws IOException {
-        return new JsonContext().parse(json);
-    }
-
-    /**
      * Parses the given JSON input using the provided {@link Configuration} and
      * returns a {@link DocumentContext} for path evaluation
      *
@@ -670,17 +659,6 @@ public class JsonPath {
      * @return a read context
      */
     public static DocumentContext parse(File json, Configuration configuration) throws IOException {
-        return new JsonContext(configuration).parse(json);
-    }
-
-    /**
-     * Parses the given JSON input using the provided {@link Configuration} and
-     * returns a {@link DocumentContext} for path evaluation
-     *
-     * @param json input
-     * @return a read context
-     */
-    public static DocumentContext parse(URL json, Configuration configuration) throws IOException {
         return new JsonContext(configuration).parse(json);
     }
 
